@@ -1,3 +1,14 @@
+body, html{
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Josefin Sans', sans-serif;
+*/
+
+
 /* Landing section styling => Social icons,Navbar,Catchy image, Intro */
     /* Social-icons */
         .social-section{
@@ -12,10 +23,11 @@
 
     /* Landing-page */
         .landing-page{
-            background-image: url("https://media.istockphoto.com/photos/pepperoni-pizza-on-wooden-table-picture-id1301482898?b=1&k=20&m=1301482898&s=170667a&w=0&h=XLgT9kG_7_n02S-YzOY71EzcGgqBnY-GukEfhjOui64=");
+            background-image: url("https://media.gettyimages.com/photos/marinara-pizza-picture-id184969517?k=20&m=184969517&s=612x612&w=0&h=1WZrhrdn_XlcurBfeX-F8eGncG6cDHxwTSoSfBcdJng=");
             background-repeat: no-repeat;
-            background-size: cover;
-            height: 90vh;
+            background-size:cover;
+            background-position: center;
+            height: 90%;
             width: 100%;
         }
         
