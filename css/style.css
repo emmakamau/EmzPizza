@@ -153,3 +153,12 @@ body, html{
     text-align: center;
     font-weight: bold;
 }
+
+.checkout-complete{
+    padding: 2vw;
+    float: right;
+}
+
+#checkout-btn{
+    margin-right: 1vw;
+}
