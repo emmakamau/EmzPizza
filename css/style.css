@@ -142,3 +142,14 @@ body, html{
     height: 25vh;
     width: 20vw;
 }
+
+
+/* Checkout section */
+.checkout-section{
+    padding: 2vh 3vw;
+}
+
+.checkout-title{
+    text-align: center;
+    font-weight: bold;
+}
