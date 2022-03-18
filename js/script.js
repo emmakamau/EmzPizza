@@ -10,21 +10,28 @@ $(document).ready(function(){
 
         var newPizzaPurchase = new pizzaPurchase()
 
-        //if ($('input.checkbox_check').is(':checked'))
+        
 
-        $(".form-pizza-row").each(function(){
-            var quantity = $(this).find('.qty').find(":selected").text();
-            var size = $(this).find('.size').find(":selected").text();
-            var crust = $(this).find('.crust').find(":selected").text();
-            var toppings = $(this).find('.toppings').find(":selected").text();
-            var newOrder = new pizzaOrder(quantity,size,crust,toppings)
-            newPizzaPurchase.orders.push(newOrder)
+        // if($('input#pizza-selected_'+splitId[1]).is(':checked'))
+        $("div.form-pizza-row").each(function(){
+            var checkId = $(this).find("input.pizza-selected").attr("id")
+            var splitId = checkId.split("_")
+            console.log(checkId)
+            if($('input#pizza-selected_'+splitId[1]).is(':checked')){
+                var quantity = $(this).find('.qty').find(":selected").text();
+                var size = $(this).find('.size').find(":selected").text();
+                var crust = $(this).find('.crust').find(":selected").text();
+                var toppings = $(this).find('.toppings').find(":selected").text();
+                var newOrder = new pizzaOrder(quantity,size,crust,toppings)
+                newPizzaPurchase.orders.push(newOrder)
+                newOrder.priceCalculation()
 
-            newOrder.subTotal()
-
-
+                console.log(newOrder)
+            }
         }) 
-        console.log(newPizzaPurchase)
+       
+
+        // console.log(newPizzaPurchase)
     })
 
     function pizzaOrder(qty, size, crust, toppings){
@@ -38,10 +45,11 @@ $(document).ready(function(){
         this.orders = []
     }    
 
-    pizzaOrder.prototype.subTotal = function(){
+    pizzaOrder.prototype.priceCalculation = function(){
 
         var priceSize
         var priceCrust
+        var deliveryFee
         var subTotal
         // var total
         if(this.size === "Small"){
@@ -60,10 +68,15 @@ $(document).ready(function(){
             priceCrust = 200
         }
 
+        // if($('input#to-be-delivered').is(':checked')){
+        //     deliveryFee = 200
+        // }else{
+        //     deliveryFee = 0
+        // }
+
         subTotal = (priceSize+priceCrust)*parseInt(this.qty)
-        console.log(this.qty, this.size, this.crust, this.toppings)
-        console.log(priceCrust, priceSize)
-        console.log(subTotal)
+        document.getElementById('total-amt').innerHTML = subTotal
+        
     }
     
 })

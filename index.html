@@ -85,7 +85,7 @@
         <!-- Hawaiian -->
         <div class="row form-pizza-row">
           <div class="col-1">
-            <input class="form-check-input pizza-selected" type="checkbox" id="pizza_selected-hawaiian">
+            <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_hawaiian">
           </div>
           <div class="col-3">
             <img class="form-img"
@@ -137,15 +137,14 @@
             </div>
           </div>
           <div class="col-1 sub-total">
-            <p class="sub-total"></p>
+            <p class="sub-total" id=""></p>
           </div>
         </div>
 
         <!-- Chicken Macon BBQ  -->
-      <form action="" id="chicken-macon">
         <div class="row form-pizza-row">
           <div class="col-1">
-            <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected-chicken-macon">
+            <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_chicken-macon">
           </div>
           <div class="col-3">
             <img class="form-img"
@@ -202,12 +201,15 @@
         </div>
         <div class="row submit-form">
           <!-- Delivery status and submit -->
-          <div class="col-1">
+          <div class="col-2">
             <input class="form-check-input to-be-delivered" type="checkbox" id="to-be-delivered">
             <label class="" for="delivery">Deliver</label>
           </div>
-          <div class="col-8">
+          <div class="col-6">
             <button type="submit" class="btn complete-order">COMPLETE ORDER</button>
+          </div>
+          <div class="col-4">
+            <h3 class="checkout-complete">Total amount : Ksh<span id="total-amt"></span></h3>
           </div>
         </div>
       </form>
