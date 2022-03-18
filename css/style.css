@@ -1,0 +1,11 @@
+/* Landing section styling => Social icons,Navbar,Catchy image, Intro */
+    /* Social-icons */
+        .social-section{
+            background-color: black;
+        }
+
+        .social-icons{
+            height: 3vh;
+            width: 2vw;
+            padding: 4px;
+        }
