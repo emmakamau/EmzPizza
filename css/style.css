@@ -30,4 +30,52 @@ body, html{
             height: 90%;
             width: 100%;
         }
+
+        .intro{
+            padding: 14vh 25vw 6vh;
+        }
+
+        .intro-btn-main{
+            padding: 1vh 30vw;
+        }
         
+        .this-div{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+        .intro-button{
+            background-color: #E45826;
+            color: white;
+            font-weight: bold;
+            border: white solid 1px;
+            padding: 4px 8px;
+            margin: 1vw;
+        }
+
+        .intro-txt{
+            color: white;
+            font-weight: 900;
+            font-size: 6vw;
+            text-align: left;
+            line-height: 8px;
+        }
+
+        #intro-slice{
+            text-align: right;
+        }
+
+        .intro-txt-life{
+            color: white;
+            font-weight: 900;
+            font-size: 12vw;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            letter-spacing: 3vw;
+        }
+
+        /* Navigation bar */
+        .navigation-bar{
+            background-color: #E45826 !important;
+        }
