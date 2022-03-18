@@ -39,17 +39,11 @@ body, html{
             padding: 1vh 30vw;
         }
         
-        .this-div{
-            position: absolute;
-            top: 50%;
-            width: 100%;
-        }
-
         .intro-button{
             background-color: #E45826;
             color: white;
             font-weight: bold;
-            border: white solid 1px;
+            border: white solid 1px !important;
             padding: 4px 8px;
             margin: 1vw;
         }
@@ -78,4 +72,46 @@ body, html{
         /* Navigation bar */
         .navigation-bar{
             background-color: #E45826 !important;
+            opacity: 0.7;
         }
+
+        .logo{
+            height: 7vh;
+            width: 6vw;
+        }
+
+        .navbar-brand-logo{
+            padding: 0 !important;
+        }
+
+    /* Order now section */
+    .order-now{
+        padding: 2em;
+        background-color: black;
+    }
+
+    .order-now-two{
+        background-color: white;
+        width: 50%;
+        padding: 0.5vh;
+        margin: 0 auto;
+    }
+
+    .order-now-image{
+        height: 10vh;
+        width: 10vw;
+        float: right;
+    }
+
+    #order-txt{
+        font-family: 'Dancing Script', cursive;
+        font-size: 5vw;
+    }
+
+    #online-txt{
+        padding: 0 1vw;
+        color: #E45826;
+        font-weight: bold;
+    }
+        
+
