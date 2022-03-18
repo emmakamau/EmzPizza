@@ -58,8 +58,8 @@
   </div>
 
   <!-- Order now -->
-  <div class="order-now" id="d-wrapper">
-    <div class="order-now-select row">
+  <div class="order-now">
+    <div class="order-now-select row" id="order-now-select">
       <div class="col">
         <img class="order-now-image"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX1pmFvDGAaXOChFzzjh1PW1kD31KFSSY1Jw&usqp=CAU">
@@ -73,14 +73,19 @@
 
   <!-- Order form -->
 
-  <div class="order-form-section">
+  <div class="order-form-section" id="order-form-section">
     <div class="order-form-main">
       <h1 class="form-title">Pizza Order Form</h1>
-      <form action="">
+      <div class="row form-price-desc">
+        <div class="col"><h5>Small - Ksh 500</h5></div>
+        <div class="col"><h4>Medium - Ksh 800</h4></div>
+        <div class="col"><h3>Large - Ksh 1,100</h3></div>
+      </div>
+      <form action="" id="pizza-order-form">
         <!-- Hawaiian -->
         <div class="row form-pizza-row">
           <div class="col-1">
-            <input class="form-check-input" type="checkbox" id="pizza-selected">
+            <input class="form-check-input pizza-selected" type="checkbox" id="pizza_selected-hawaiian">
           </div>
           <div class="col-3">
             <img class="form-img"
@@ -92,8 +97,8 @@
             <div class="form-pizza-more-info row">
               <div class="col">
                 <!-- Select number of pizza's to be bought -->
-                <label class="mr-sm-2" for="qty">Quantity</label>
-                <select class="custom-select mr-sm-2" id="qty">
+                <label class="" for="qty">Quantity</label>
+                <select class="custom-select qty" onChange="subTotal()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -103,8 +108,8 @@
               </div>
               <div class="col">
                 <!-- Select pizza size -->
-                <label class="mr-sm-2" for="size">Size</label>
-                <select class="custom-select mr-sm-2" id="size">
+                <label class="" for="size">Size</label>
+                <select class="custom-select size" onChange="subTotal()">
                   <option value="1">Small</option>
                   <option value="2">Medium</option>
                   <option value="3">Large</option>
@@ -112,8 +117,8 @@
               </div>
               <div class="col">
                 <!-- Select crust type -->
-                <label class="mr-sm-2" for="crust">Crust</label>
-                <select class="custom-select mr-sm-2" id="crust">
+                <label class="" for="crust">Crust</label>
+                <select class="custom-select crust" onChange="subTotal()">
                   <option value="1">Crispy</option>
                   <option value="2">Stuffed</option>
                   <option value="3">Gluten-free</option>
@@ -121,45 +126,39 @@
               </div>
               <div class="col">
                 <!-- Select toppings type -->
-                <label class="mr-sm-2" for="topping">Toppings</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option selected>Choose...</option>
+                <label class="" for="topping">Toppings</label>
+                <select multiple class="custom-select toppings" onChange="subTotal()">
                   <option value="1">Onion</option>
                   <option value="2">Sausages</option>
                   <option value="3">Mushrooms</option>
                   <option value="3">Extra cheese</option>
                 </select>
               </div>
-              <div class="col">
-                <!-- Delivery status -->
-                <label class="mr-sm-2" for="delivery">To be Delivered</label>
-                <input class="form-check-input" type="checkbox" id="to-be-delivered">
-              </div>
             </div>
           </div>
           <div class="col-1">
-            <h4 class="form-pizza-price">sh.500</h4>
             <p class="sub-total">Formular</p>
           </div>
         </div>
 
         <!-- Chicken Macon BBQ  -->
+      <form action="" id="chicken-macon">
         <div class="row form-pizza-row">
           <div class="col-1">
-            <input class="form-check-input" type="checkbox" id="pizza-selected">
+            <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected-chicken-macon">
           </div>
           <div class="col-3">
             <img class="form-img"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFiLmLntOxCHtMwGSo66aLPeHfpgjMcpsY5g&usqp=CAU">
           </div>
           <div class="col-7">
-            <h4 class="form-pizza-name">Chicken Macon BBQ </h4>
+            <h4 class="form-pizza-name">Pizza Chicken Macon BBQ </h4>
             <p class="form-pizza-ingredients">spicy barbeque sauce, diced chicken, cilantro, peppers, onion and cheese</p>
             <div class="form-pizza-more-info row">
               <div class="col">
                 <!-- Select number of pizza's to be bought -->
-                <label class="mr-sm-2" for="qty">Quantity</label>
-                <select class="custom-select mr-sm-2" id="qty">
+                <label class="" for="qty">Quantity</label>
+                <select class="custom-select qty" onChange="subTotal()">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -169,8 +168,8 @@
               </div>
               <div class="col">
                 <!-- Select pizza size -->
-                <label class="mr-sm-2" for="size">Size</label>
-                <select class="custom-select mr-sm-2" id="size">
+                <label class="" for="size">Size</label>
+                <select class="custom-select size" onChange="subTotal()">
                   <option value="1">Small</option>
                   <option value="2">Medium</option>
                   <option value="3">Large</option>
@@ -178,8 +177,8 @@
               </div>
               <div class="col">
                 <!-- Select crust type -->
-                <label class="mr-sm-2" for="crust">Crust</label>
-                <select class="custom-select mr-sm-2" id="crust">
+                <label class="" for="crust">Crust</label>
+                <select class="custom-select crust" onChange="subTotal()">
                   <option value="1">Crispy</option>
                   <option value="2">Stuffed</option>
                   <option value="3">Gluten-free</option>
@@ -187,225 +186,30 @@
               </div>
               <div class="col">
                 <!-- Select toppings type -->
-                <label class="mr-sm-2" for="topping">Toppings</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option selected>Choose...</option>
+                <label class="" for="topping">Toppings</label>
+                <select multiple class="custom-select toppings" onChange="subTotal()">
                   <option value="1">Onion</option>
                   <option value="2">Sausages</option>
                   <option value="3">Mushrooms</option>
                   <option value="3">Extra cheese</option>
                 </select>
               </div>
-              <div class="col">
-                <!-- Delivery status -->
-                <label class="mr-sm-2" for="delivery">To be Delivered</label>
-                <input class="form-check-input" type="checkbox" id="to-be-delivered">
-              </div>
             </div>
           </div>
           <div class="col-1">
-            <h4 class="form-pizza-price">sh.500</h4>
             <p class="sub-total">Formular</p>
           </div>
         </div>
-
-        <!-- Spicy Boerewors -->
-        <div class="row form-pizza-row">
+        <div class="row submit-form">
+          <!-- Delivery status and submit -->
           <div class="col-1">
-            <input class="form-check-input" type="checkbox" id="pizza-selected">
+            <input class="form-check-input to-be-delivered" type="checkbox" id="to-be-delivered">
+            <label class="" for="delivery">Deliver</label>
           </div>
-          <div class="col-3">
-            <img class="form-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfmWSQkKWoCJgxQn9UgzBCrqInrUxtmHgm-A&usqp=CAU">
-          </div>
-          <div class="col-7">
-            <h4 class="form-pizza-name">Pizza Spicy Boerewors</h4>
-            <p class="form-pizza-ingredients">boerewors, marmalade — onion,mozzarella cheese</p>
-            <div class="form-pizza-more-info row">
-              <div class="col">
-                <!-- Select number of pizza's to be bought -->
-                <label class="mr-sm-2" for="qty">Quantity</label>
-                <select class="custom-select mr-sm-2" id="qty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select pizza size -->
-                <label class="mr-sm-2" for="size">Size</label>
-                <select class="custom-select mr-sm-2" id="size">
-                  <option value="1">Small</option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select crust type -->
-                <label class="mr-sm-2" for="crust">Crust</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option value="1">Crispy</option>
-                  <option value="2">Stuffed</option>
-                  <option value="3">Gluten-free</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select toppings type -->
-                <label class="mr-sm-2" for="topping">Toppings</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option value="1">Onion</option>
-                  <option value="2">Sausages</option>
-                  <option value="3">Mushrooms</option>
-                  <option value="3">Extra cheese</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Delivery status -->
-                <label class="mr-sm-2" for="delivery">To be Delivered</label>
-                <input class="form-check-input" type="checkbox" id="to-be-delivered">
-              </div>
-            </div>
-          </div>
-          <div class="col-1">
-            <h4 class="form-pizza-price">sh.500</h4>
-            <p class="sub-total">Formular</p>
+          <div class="col-8">
+            <button type="submit" class="btn complete-order">COMPLETE ORDER</button>
           </div>
         </div>
-
-        <!-- Chicken & Beef Pepperoni  -->
-        <div class="row form-pizza-row">
-          <div class="col-1">
-            <input class="form-check-input" type="checkbox" id="pizza-selected">
-          </div>
-          <div class="col-3">
-            <img class="form-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlzmMuXbDT-Z9JnsTFRckIeeBXWiYQyFqlpsKfaqqMFpKjS4wly8XKPkNzMti24RL6E7A&usqp=CAU">
-          </div>
-          <div class="col-7">
-            <h4 class="form-pizza-name">Pizza Chicken & Beef Pepperoni </h4>
-            <p class="form-pizza-ingredients">cheese, chicken& beef mixture, pepperoni and mushrooms </p>
-            <div class="form-pizza-more-info row">
-              <div class="col">
-                <!-- Select number of pizza's to be bought -->
-                <label class="mr-sm-2" for="qty">Quantity</label>
-                <select class="custom-select mr-sm-2" id="qty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select pizza size -->
-                <label class="mr-sm-2" for="size">Size</label>
-                <select class="custom-select mr-sm-2" id="size">
-                  <option value="1">Small</option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select crust type -->
-                <label class="mr-sm-2" for="crust">Crust</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option value="1">Crispy</option>
-                  <option value="2">Stuffed</option>
-                  <option value="3">Gluten-free</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select toppings type -->
-                <label class="mr-sm-2" for="topping">Toppings</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option value="1">Onion</option>
-                  <option value="2">Sausages</option>
-                  <option value="3">Mushrooms</option>
-                  <option value="3">Extra cheese</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Delivery status -->
-                <label class="mr-sm-2" for="delivery">To be Delivered</label>
-                <input class="form-check-input" type="checkbox" id="to-be-delivered">
-              </div>
-            </div>
-          </div>
-          <div class="col-1">
-            <h4 class="form-pizza-price">sh.500</h4>
-            <p class="sub-total">Formular</p>
-          </div>
-        </div>
-
-        <!-- Beef steak & Mushroom -->
-        <div class="row form-pizza-row">
-          <div class="col-1">
-            <input class="form-check-input" type="checkbox" id="pizza-selected">
-          </div>
-          <div class="col-3">
-            <img class="form-img"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbeP9Lh6a0EsdhNNqFvUvc8_weodLm1_azpw&usqp=CAU">
-          </div>
-          <div class="col-7">
-            <h4 class="form-pizza-name">Pizza Beef steak & Mushroom</h4>
-            <p class="form-pizza-ingredients">minced garlic, mushrooms,cheese</p>
-            <div class="form-pizza-more-info row">
-              <div class="col">
-                <!-- Select number of pizza's to be bought -->
-                <label class="mr-sm-2" for="qty">Quantity</label>
-                <select class="custom-select mr-sm-2" id="qty">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select pizza size -->
-                <label class="mr-sm-2" for="size">Size</label>
-                <select class="custom-select mr-sm-2" id="size">
-                  <option value="1">Small</option>
-                  <option value="2">Medium</option>
-                  <option value="3">Large</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select crust type -->
-                <label class="mr-sm-2" for="crust">Crust</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option value="1">Crispy</option>
-                  <option value="2">Stuffed</option>
-                  <option value="3">Gluten-free</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Select toppings type -->
-                <label class="mr-sm-2" for="topping">Toppings</label>
-                <select class="custom-select mr-sm-2" id="crust">
-                  <option selected>Choose...</option>
-                  <option value="1">Onion</option>
-                  <option value="2">Sausages</option>
-                  <option value="3">Mushrooms</option>
-                  <option value="3">Extra cheese</option>
-                </select>
-              </div>
-              <div class="col">
-                <!-- Delivery status -->
-                <label class="mr-sm-2" for="delivery">To be Delivered</label>
-                <input class="form-check-input" type="checkbox" id="to-be-delivered">
-              </div>
-            </div>
-          </div>
-          <div class="col-1">
-            <h4 class="form-pizza-price">sh.500</h4>
-            <p class="sub-total">Formular</p>
-          </div>
-        </div>
-        <h3 class="checkout-complete">Total amount : Ksh<span id="total-amt">2,000</span></h3>
-        <button type="submit" class="btn complete-order">COMPLETE ORDER</button>
       </form>
     </div>
   </div>

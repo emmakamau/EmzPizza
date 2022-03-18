@@ -121,10 +121,15 @@ body, html{
 
 .order-form-section{
     padding: 2vh;
+    display: none;
 }
 
 .order-form-main{
     padding: 1vh 6vw;
+}
+
+.form-price-desc{
+    text-align: center;
 }
 
 .form-pizza-row{
@@ -150,10 +155,15 @@ body, html{
     border: none;
 }
 
+.submit-form{
+    margin-right:10vw ;
+}
+
 
 /* Checkout section */
 .checkout-section{
     padding: 2vh 3vw;
+    display: none;
 }
 
 .checkout-title{
