@@ -143,6 +143,12 @@ body, html{
     width: 20vw;
 }
 
+.complete-order{
+    background-color: #E45826;
+    color: black;
+    border: none;
+}
+
 
 /* Checkout section */
 .checkout-section{
