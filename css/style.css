@@ -154,11 +154,36 @@ body, html{
     font-weight: bold;
 }
 
+.checkout-info{
+    padding: 0 3vw;
+}
+
 .checkout-complete{
-    padding: 2vw;
-    float: right;
+    padding: 1vh 0;
 }
 
 #checkout-btn{
-    margin-right: 1vw;
+    margin-left: 2vw !important;
+    background-color: #E45826;
+    color: black;
+    border: none;
+}
+
+/* Contact us styling */
+
+.contact-section{
+    background-color: black;
+    padding: 6vh;
+}
+
+.contact-name{
+    text-align: center;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+.contact-info{
+    text-align: center;
+    color: white;
+    line-height: 10px;
 }
