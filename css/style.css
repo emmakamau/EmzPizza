@@ -1,6 +1,7 @@
 body, html{
     height: 100%;
     font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 
 /* 
@@ -84,34 +85,60 @@ body, html{
             padding: 0 !important;
         }
 
-    /* Order now section */
-    .order-now{
-        padding: 2em;
-        background-color: black;
-    }
+/* Order now section */
+.order-now{
+    padding: 2em;
+    background-color: black;
+}
 
-    .order-now-two{
-        background-color: white;
-        width: 50%;
-        padding: 0.5vh;
-        margin: 0 auto;
-    }
+.order-now-two{
+    background-color: white;
+    width: 50%;
+    padding: 0.5vh;
+    margin: 0 auto;
+    
+}
 
-    .order-now-image{
-        height: 10vh;
-        width: 10vw;
-        float: right;
-    }
+.order-now-image{
+    height: 10vh;
+    width: 10vw;
+    float: right;
+}
 
-    #order-txt{
-        font-family: 'Dancing Script', cursive;
-        font-size: 5vw;
-    }
+#order-txt{
+    font-family: 'Dancing Script', cursive;
+    font-size: 5vw;
+}
 
-    #online-txt{
-        padding: 0 1vw;
-        color: #E45826;
-        font-weight: bold;
-    }
-        
+#online-txt{
+    padding: 0 1vw;
+    color: #E45826;
+    font-weight: bold;
+}
+    
+/* Pizza order form */
 
+.order-form-section{
+    padding: 2vh;
+}
+
+.order-form-main{
+    padding: 1vh 6vw;
+}
+
+.form-pizza-row{
+    margin: 4vh 0;
+    background-color: #E6D5B8;
+    padding: 1vw;
+}
+
+.form-title{
+    text-align: center;
+    font-weight: bold;
+    padding: 2vh;
+}
+
+.form-img{
+    height: 25vh;
+    width: 20vw;
+}
