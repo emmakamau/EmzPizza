@@ -3,7 +3,7 @@
 
 <head>
   <title>EmzPizza</title>
-  <link rel = "icon" href ="assets/favicon.jpg" type = "image/x-icon">
+  <link rel="icon" href="assets/favicon.jpg" type="image/x-icon">
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@200&display=swap"
     rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -27,15 +27,17 @@
 
   <!-- Social icons -->
   <div class="social-section">
-    <a href="https://www.facebook.com/">
-      <img src="assets/facebook-xl.png" class="social-icons" alt="facebook">
-    </a>
-    <a href="https://www.instagram.com/">
-      <img src="assets/instagram-xl.png" class="social-icons" alt="instagram">
-    </a>
-    <a href="https://www.twitter.com/">
-      <img src="assets/twitter-xl.png" class="social-icons" alt="twitter">
-    </a>
+    <div class="icons" align="right">
+      <a href="https://www.facebook.com/">
+        <img src="assets/facebook-xl.png" class="social-icons" alt="facebook">
+      </a>
+      <a href="https://www.instagram.com/">
+        <img src="assets/instagram-xl.png" class="social-icons" alt="instagram">
+      </a>
+      <a href="https://www.twitter.com/">
+        <img src="assets/twitter-xl.png" class="social-icons" alt="twitter">
+      </a>
+    </div>
   </div>
 
   <!-- Landing Image and Intro -->
@@ -81,8 +83,7 @@
         <!-- Hawaiian -->
         <div class="row form-pizza-row">
           <div class="col-sm-4">
-            <img class="form-img"
-              src="assets/pizza/hawaiian.jpeg">
+            <img class="form-img" src="assets/pizza/hawaiian.jpeg">
           </div>
           <div class="col-sm-8">
             <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_hawaiian">
@@ -135,8 +136,7 @@
         <!-- Chicken Macon BBQ  -->
         <div class="row form-pizza-row">
           <div class="col-sm-4">
-            <img class="form-img"
-              src="assets/pizza/chicken-macon.jpeg">
+            <img class="form-img" src="assets/pizza/chicken-macon.jpeg">
           </div>
           <div class="col-sm-8">
             <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_chicken-macon">
@@ -190,13 +190,12 @@
         <!-- Spicy Boerewors  -->
         <div class="row form-pizza-row">
           <div class="col-sm-4">
-            <img class="form-img"
-              src="assets/pizza/spicy-boewers.jpeg">
+            <img class="form-img" src="assets/pizza/spicy-boewers.jpeg">
           </div>
           <div class="col-sm-8">
             <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_spicy-boerewors">
             <h4 class="form-pizza-name" id="pizza-name_spicy-boerewors">Pizza Spicy Boerewors </h4>
-            <p class="form-pizza-ingredients">boerewors, marmalade — onion,mozzarella cheese	
+            <p class="form-pizza-ingredients">boerewors, marmalade — onion,mozzarella cheese
             </p>
             <div class="form-pizza-more-info row">
               <div class="col">
@@ -245,13 +244,12 @@
         <!-- Chicken & Beef Pepperoni  -->
         <div class="row form-pizza-row">
           <div class="col-sm-4">
-            <img class="form-img"
-              src="assets/pizza/pepperoni.jpeg">
+            <img class="form-img" src="assets/pizza/pepperoni.jpeg">
           </div>
           <div class="col-sm-8">
             <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_chicken-pepperoni">
             <h4 class="form-pizza-name" id="pizza-name_chicken-pepperoni">Pizza Chicken & Beef Pepperoni</h4>
-            <p class="form-pizza-ingredients">cheese, chicken& beef mixture, pepperoni and mushrooms 
+            <p class="form-pizza-ingredients">cheese, chicken& beef mixture, pepperoni and mushrooms
             </p>
             <div class="form-pizza-more-info row">
               <div class="col">
@@ -300,13 +298,12 @@
         <!--Beef steak & Mushroom -->
         <div class="row form-pizza-row">
           <div class="col-sm-4">
-            <img class="form-img"
-              src="assets/pizza/mushroom.jpeg">
+            <img class="form-img" src="assets/pizza/mushroom.jpeg">
           </div>
           <div class="col-sm-8">
             <input class="form-check-input pizza-selected" type="checkbox" id="pizza-selected_mushroom">
             <h4 class="form-pizza-name" id="pizza-name_mushroom">Pizza Beef steak & Mushroom</h4>
-            <p class="form-pizza-ingredients">cheese, chicken& beef mixture, pepperoni and mushrooms 
+            <p class="form-pizza-ingredients">cheese, chicken& beef mixture, pepperoni and mushrooms
             </p>
             <div class="form-pizza-more-info row">
               <div class="col">
@@ -355,7 +352,8 @@
           <!-- Delivery status and submit -->
           <div class="col-1"></div>
           <div class="col-1">
-            <input class="form-check-input to-be-delivered" onchange="deliveryMsg()" type="checkbox" id="to-be-delivered">
+            <input class="form-check-input to-be-delivered" onchange="deliveryMsg()" type="checkbox"
+              id="to-be-delivered">
             <label class="" for="delivery">Deliver</label>
           </div>
           <div class="col-10">
@@ -417,4 +415,3 @@
 </body>
 
 </html>
-
