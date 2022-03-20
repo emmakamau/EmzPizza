@@ -44,16 +44,17 @@ body, html{
             left: 50%;
         }
 
+        #intro-slice{
+            padding-top: 2vh;
+            text-align: right;
+        }
+
         .intro-txt{
             color: white;
             font-weight: 900;
             font-size: 6vw;
             text-align: left;
             line-height: 8px;
-        }
-
-        #intro-slice{
-            text-align: right;
         }
 
         .intro-txt-life{
@@ -187,7 +188,7 @@ body, html{
 @media screen and (max-width: 480px) {
     .col-sm-8{
         margin-top: 1em;
-        padding: 0 10vw;
+        padding: 1vh 10vw;
     }
 
     .col-sm-4{
@@ -203,6 +204,19 @@ body, html{
         height: 4vh;
         width: 4vw;
         padding: 4px;
+    }
+
+    .intro-txt{
+        font-size: 14vw;
+        line-height: 10px;
+    }
+
+    .intro-txt-life{
+        font-size: 20vw;
+    }
+
+    .intro{
+        padding: 14vh 4vw 6vh;
     }
 
   }
