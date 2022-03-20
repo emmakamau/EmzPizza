@@ -4,12 +4,6 @@ body, html{
     font-weight: 600;
 }
 
-/* 
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Josefin Sans', sans-serif;
-*/
-
-
 /* Landing section styling => Social icons,Navbar,Catchy image, Intro */
     /* Social-icons */
         .social-section{
@@ -140,6 +134,11 @@ body, html{
     background-color: #E45826;
     color: black;
     border: none;
+}
+
+.col-4{
+    height:40vh;
+    width: 10vw;
 }
 
 /* Checkout section */

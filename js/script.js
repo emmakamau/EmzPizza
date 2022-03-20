@@ -4,6 +4,8 @@ $(document).ready(function(){
         $("div#order-form-section").show()
     })
 
+    $(".myTooltip").tooltip()
+
     var subTotal = 0
     var calcTotal = 0
     //Form submission and user logic
@@ -12,43 +14,41 @@ $(document).ready(function(){
         
         if($('input.form-check-input').is(':checked')){
         
-        var newPizzaPurchase = new pizzaPurchase()
+            var newPizzaPurchase = new pizzaPurchase()
 
-        // if($('input#pizza-selected_'+splitId[1]).is(':checked'))
-        $("div.form-pizza-row").each(function(){
-            var checkId = $(this).find("input.pizza-selected").attr("id")
-            var splitId = checkId.split("_")
-            if($('input#pizza-selected_'+splitId[1]).is(':checked')){
-                var pizzaName = $(this).find('h4#pizza-name_'+splitId[1]).text();
-                var quantity = $(this).find('.qty').find(":selected").text();
-                var size = $(this).find('.size').find(":selected").text();
-                var crust = $(this).find('.crust').find(":selected").text();
-                var toppings = $(this).find('.toppings').find(":selected").toArray().map(item => item.text);
-               
-                var newOrder = new pizzaOrder(quantity,size,crust,toppings)
-                newPizzaPurchase.orders.push(newOrder)
-                subTotal = newOrder.priceCalculation()
-                deliveryFee = newPizzaPurchase.delivery()
+            $("div.form-pizza-row").each(function(){
+                var checkId = $(this).find("input.pizza-selected").attr("id")
+                var splitId = checkId.split("_")
+                if($('input#pizza-selected_'+splitId[1]).is(':checked')){
+                    var pizzaName = $(this).find('h4#pizza-name_'+splitId[1]).text();
+                    var quantity = $(this).find('.qty').find(":selected").text();
+                    var size = $(this).find('.size').find(":selected").text();
+                    var crust = $(this).find('.crust').find(":selected").text();
+                    var toppings = $(this).find('.toppings').find(":selected").toArray().map(item => item.text);
+                
+                    var newOrder = new pizzaOrder(quantity,size,crust,toppings)
+                    newPizzaPurchase.orders.push(newOrder)
+                    subTotal = newOrder.priceCalculation()
+                    deliveryFee = newPizzaPurchase.delivery()
 
-                $('tbody#display-order').append(
-                        `<tr>`+
-                            `<th>${pizzaName}</th>`+
-                            `<th>${quantity}</th>`+
-                            `<th>${size}</th>`+
-                            `<th>${crust}</th>`+
-                            `<th>${toppings}</th>`+
-                            `<th>${subTotal}</th>`+
-                        `</tr>`      
-                )
-
-                calcTotal = calcTotal + subTotal + deliveryFee
-                document.getElementById("total-amt").innerHTML = calcTotal
-            }
-        })
-    
-        $("div.checkout-section").show()
-        $("div.order-form-section").hide()
-        document.querySelector("form").reset(); //Reset form after submission
+                    $('tbody#display-order').append(
+                            `<tr>`+
+                                `<th>${pizzaName}</th>`+
+                                `<th>${quantity}</th>`+
+                                `<th>${size}</th>`+
+                                `<th>${crust}</th>`+
+                                `<th>${toppings}</th>`+
+                                `<th>${subTotal}</th>`+
+                            `</tr>`      
+                    )
+                    calcTotal = calcTotal + subTotal + deliveryFee
+                    document.getElementById("total-amt").innerHTML = calcTotal
+                }
+            })
+        
+            $("div.checkout-section").show()
+            $("div.order-form-section").hide()
+            document.querySelector("form").reset(); //Reset form after submission
         }else{
             alert("Pizza not selected!")
         }
@@ -108,7 +108,6 @@ $(document).ready(function(){
         })
 
         subTotal = (priceSize+priceCrust+priceToppings)*parseInt(this.qty)
-        
         return subTotal
     }
 })
