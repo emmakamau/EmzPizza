@@ -25,6 +25,7 @@ $(document).ready(function(){
                 var newOrder = new pizzaOrder(quantity,size,crust,toppings)
                 newPizzaPurchase.orders.push(newOrder)
                 subTotal = newOrder.priceCalculation()
+                deliveryFee = newPizzaPurchase.delivery()
 
                 $('tbody#display-order').append(
                         `<tr>`+
@@ -34,21 +35,16 @@ $(document).ready(function(){
                             `<th>${crust}</th>`+
                             `<th>${toppings}</th>`+
                             `<th>${subTotal}</th>`+
-                        `</tr>`
-                        
+                        `</tr>`      
                 )
-
-                if($('input#to-be-delivered').is(':checked')){
-                    deliveryFee = 200
-                }else{
-                    deliveryFee = 0
-                }                
 
                 calcTotal = calcTotal + subTotal + deliveryFee
                 document.getElementById("total-amt").innerHTML = calcTotal
                 console.log("Total:",calcTotal)
             }
         }) 
+        $("div.checkout-section").show()
+        $("div.order-form-section").hide()
         document.querySelector("form").reset(); //Reset form after submission
     })
 
@@ -63,15 +59,22 @@ $(document).ready(function(){
         this.orders = []
     }    
 
-    // pizzaPurchase.prototype.calcTotal = function(){
-
-    // }
+    pizzaPurchase.prototype.delivery = function(){
+        var deliveryFee
+        if($('input#to-be-delivered').is(':checked')){
+            deliveryFee = 200
+            document.getElementById("delivery-charges").innerHTML = deliveryFee
+            return deliveryFee
+        }else{
+            deliveryFee = 0
+            return deliveryFee
+        } 
+    }
 
     pizzaOrder.prototype.priceCalculation = function(){
 
         var priceSize
         var priceCrust
-        var deliveryFee
         var subTotal
         
         if(this.size === "Small"){
@@ -90,25 +93,20 @@ $(document).ready(function(){
             priceCrust = 200
         }
 
-        
-
         subTotal = (priceSize+priceCrust)*parseInt(this.qty)
         //console.log(subTotal)
         return subTotal
     }
 })
 
+function deliveryMsg(){
+    if($('input#to-be-delivered').is(':checked')){
+        var location = prompt("Enter your location:")
+        alert(`Your pizza will be delivered at ${location}.`)
+    }
+}
 
-
-
-
-
-// $("div.form-pizza-row").each(function(){
-        //     var checkId = $(this).find("input.pizza-selected").attr("id")
-        //     var splitId = checkId.split("_")
-        //     console.log('sub-total_'+splitId[1])
-        //     document.getElementById('p#sub-total_'+splitId).innerHTML = subTotal
-         
-        // }) 
-
-        // document.getElementById('p#sub-total_hawaiian').innerHTML = subTotal
+function completeOrder(){
+    alert("Thank you, your order has been received.")
+    $("div.checkout-section").hide()
+}
