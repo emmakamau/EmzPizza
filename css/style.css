@@ -114,6 +114,11 @@ body, html{
     text-align: center;
 }
 
+.form-check-input{
+    height: 16px;
+    width: 16px;
+}
+
 .form-pizza-row{
     margin: 4vh 0;
     background-color: #E6D5B8;
@@ -127,8 +132,8 @@ body, html{
 }
 
 .form-img{
-    height: 25vh;
-    width: 20vw;
+    height: 100%;
+    width: 100%;
 }
 
 .complete-order{
@@ -181,3 +186,13 @@ body, html{
     color: white;
     line-height: 10px;
 }
+
+
+/* Media queries */
+
+@media screen and (max-width: 480px) {
+    
+  }
+
+
+

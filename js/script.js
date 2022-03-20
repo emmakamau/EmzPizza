@@ -9,7 +9,9 @@ $(document).ready(function(){
     //Form submission and user logic
     $("form#pizza-order-form").submit(function(event){
         event.preventDefault()
-
+        
+        if($('input.form-check-input').is(':checked')){
+        
         var newPizzaPurchase = new pizzaPurchase()
 
         // if($('input#pizza-selected_'+splitId[1]).is(':checked'))
@@ -22,9 +24,7 @@ $(document).ready(function(){
                 var size = $(this).find('.size').find(":selected").text();
                 var crust = $(this).find('.crust').find(":selected").text();
                 var toppings = $(this).find('.toppings').find(":selected").toArray().map(item => item.text);
-               // let toppingsArray = $(this).find('.toppings').find(":selected").val().join(',');
-
-                console.log(toppings)
+               
                 var newOrder = new pizzaOrder(quantity,size,crust,toppings)
                 newPizzaPurchase.orders.push(newOrder)
                 subTotal = newOrder.priceCalculation()
@@ -44,23 +44,29 @@ $(document).ready(function(){
                 calcTotal = calcTotal + subTotal + deliveryFee
                 document.getElementById("total-amt").innerHTML = calcTotal
             }
-        }) 
+        })
+    
         $("div.checkout-section").show()
         $("div.order-form-section").hide()
         document.querySelector("form").reset(); //Reset form after submission
+        }else{
+            alert("Pizza not selected!")
+        }
     })
 
+    //Constructors    
     function pizzaOrder(qty, size, crust, toppings){
         this.qty = qty
         this.size = size
         this.crust = crust
         this.toppings = toppings
     }
-    
+
     function pizzaPurchase(){
         this.orders = []
     }    
 
+    //Prototypes
     pizzaPurchase.prototype.delivery = function(){
         var deliveryFee
         if($('input#to-be-delivered').is(':checked')){
@@ -107,6 +113,8 @@ $(document).ready(function(){
     }
 })
 
+//JavaScript
+//Get user location
 function deliveryMsg(){
     if($('input#to-be-delivered').is(':checked')){
         var location = prompt("Enter your location:")
@@ -114,7 +122,9 @@ function deliveryMsg(){
     }
 }
 
+//Order received message
 function completeOrder(){
     alert("Thank you, your order has been received.")
     $("div.checkout-section").hide()
 }
+
