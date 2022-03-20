@@ -187,7 +187,18 @@ body, html{
 @media screen and (max-width: 480px) {
     .col-sm-8{
         margin-top: 1em;
+        padding: 0 10vw;
     }
+
+    .col-sm-4{
+        padding: 0 !important;
+    }
+
+    .form-pizza-row{
+        margin: 2vh 0;
+        padding:0;
+    }
+
   }
 
 
