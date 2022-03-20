@@ -81,9 +81,9 @@ $(document).ready(function(){
 
     pizzaOrder.prototype.priceCalculation = function(){
 
-        var priceSize
-        var priceCrust
-        var priceToppings
+        var priceSize = 0
+        var priceCrust = 0  
+        var priceToppings = 0
         var subTotal
         
         if(this.size === "Small"){
