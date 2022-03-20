@@ -71,7 +71,10 @@ $(document).ready(function(){
         var deliveryFee
         if($('input#to-be-delivered').is(':checked')){
             deliveryFee = 200
-            document.getElementById("delivery-charges").innerHTML = deliveryFee
+            //document.getElementById("delivery-charges").innerHTML = deliveryFee
+            $("h5#delivery-charges").append(
+                `<span>Delivery fee: ${deliveryFee}</span>`
+            )
             return deliveryFee
         }else{
             deliveryFee = 0

@@ -369,10 +369,8 @@
   <div class="checkout-section">
     <h1 class="checkout-title">Summary</h1>
     <div>
-      <h3 class="checkout-complete">Total amount : Ksh <span id="total-amt"></span>
-        <span class="btn btn-primary" id="checkout-btn" onclick="completeOrder()">COMPLETE ORDER</span>
-      </h3>
-      <h5>Delivery fee: <span id="delivery-charges"></span></h5>
+      <h3 class="checkout-complete">Total amount : Ksh <span id="total-amt"></span></h3>
+      <h5 id="delivery-charges"></h5>
     </div>
     <div class="checkout-info">
       <table class="table table-responsive-md">
@@ -388,7 +386,7 @@
         </thead>
         <tbody id="display-order"></tbody>
       </table>
-
+      <span class="btn btn-primary" id="checkout-btn" onclick="completeOrder()">COMPLETE ORDER</span>
     </div>
   </div>
 

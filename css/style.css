@@ -120,6 +120,10 @@ body, html{
     padding: 1vw;
 }
 
+.submit-form{
+    padding: 0;
+}
+
 .form-title{
     text-align: center;
     font-weight: bold;
