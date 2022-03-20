@@ -136,11 +136,6 @@ body, html{
     border: none;
 }
 
-.col-4{
-    height:40vh;
-    width: 10vw;
-}
-
 /* Checkout section */
 .checkout-section{
     padding: 2vh 3vw;
@@ -190,7 +185,9 @@ body, html{
 /* Media queries */
 
 @media screen and (max-width: 480px) {
-    
+    .col-sm-8{
+        margin-top: 1em;
+    }
   }
 
 
