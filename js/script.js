@@ -26,6 +26,18 @@ $(document).ready(function(){
                 newPizzaPurchase.orders.push(newOrder)
                 subTotal = newOrder.priceCalculation()
 
+                $('tbody#display-order').append(
+                        `<tr>`+
+                            `<th>${pizzaName}</th>`+
+                            `<th>${quantity}</th>`+
+                            `<th>${size}</th>`+
+                            `<th>${crust}</th>`+
+                            `<th>${toppings}</th>`+
+                            `<th>${subTotal}</th>`+
+                        `</tr>`
+                        
+                )
+
                 if($('input#to-be-delivered').is(':checked')){
                     deliveryFee = 200
                 }else{

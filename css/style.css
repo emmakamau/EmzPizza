@@ -164,7 +164,7 @@ body, html{
 /* Checkout section */
 .checkout-section{
     padding: 2vh 3vw;
-    display: none;
+    /* display: none; */
 }
 
 .checkout-title{

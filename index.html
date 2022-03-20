@@ -77,9 +77,15 @@
     <div class="order-form-main">
       <h1 class="form-title">Pizza Order Form</h1>
       <div class="row form-price-desc">
-        <div class="col"><h5>Small - Ksh 500</h5></div>
-        <div class="col"><h4>Medium - Ksh 800</h4></div>
-        <div class="col"><h3>Large - Ksh 1,100</h3></div>
+        <div class="col">
+          <h5>Small - Ksh 500</h5>
+        </div>
+        <div class="col">
+          <h4>Medium - Ksh 800</h4>
+        </div>
+        <div class="col">
+          <h3>Large - Ksh 1,100</h3>
+        </div>
       </div>
       <form action="" id="pizza-order-form">
         <!-- Hawaiian -->
@@ -98,7 +104,7 @@
               <div class="col">
                 <!-- Select number of pizza's to be bought -->
                 <label class="" for="qty">Quantity</label>
-                <select class="custom-select qty" >
+                <select class="custom-select qty">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -109,7 +115,7 @@
               <div class="col">
                 <!-- Select pizza size -->
                 <label class="" for="size">Size</label>
-                <select class="custom-select size" >
+                <select class="custom-select size">
                   <option value="1">Small</option>
                   <option value="2">Medium</option>
                   <option value="3">Large</option>
@@ -118,7 +124,7 @@
               <div class="col">
                 <!-- Select crust type -->
                 <label class="" for="crust">Crust</label>
-                <select class="custom-select crust" >
+                <select class="custom-select crust">
                   <option value="1">Crispy</option>
                   <option value="2">Stuffed</option>
                   <option value="3">Gluten-free</option>
@@ -127,7 +133,7 @@
               <div class="col">
                 <!-- Select toppings type -->
                 <label class="" for="topping">Toppings</label>
-                <select multiple class="custom-select toppings" >
+                <select multiple class="custom-select toppings">
                   <option value="1">Onion</option>
                   <option value="2">Sausages</option>
                   <option value="3">Mushrooms</option>
@@ -152,12 +158,13 @@
           </div>
           <div class="col-7">
             <h4 class="form-pizza-name" id="pizza-name_chicken-macon">Pizza Chicken Macon BBQ </h4>
-            <p class="form-pizza-ingredients">spicy barbeque sauce, diced chicken, cilantro, peppers, onion and cheese</p>
+            <p class="form-pizza-ingredients">spicy barbeque sauce, diced chicken, cilantro, peppers, onion and cheese
+            </p>
             <div class="form-pizza-more-info row">
               <div class="col">
                 <!-- Select number of pizza's to be bought -->
                 <label class="" for="qty">Quantity</label>
-                <select class="custom-select qty" >
+                <select class="custom-select qty">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -168,7 +175,7 @@
               <div class="col">
                 <!-- Select pizza size -->
                 <label class="" for="size">Size</label>
-                <select class="custom-select size" >
+                <select class="custom-select size">
                   <option value="1">Small</option>
                   <option value="2">Medium</option>
                   <option value="3">Large</option>
@@ -177,7 +184,7 @@
               <div class="col">
                 <!-- Select crust type -->
                 <label class="" for="crust">Crust</label>
-                <select class="custom-select crust" >
+                <select class="custom-select crust">
                   <option value="1">Crispy</option>
                   <option value="2">Stuffed</option>
                   <option value="3">Gluten-free</option>
@@ -186,7 +193,7 @@
               <div class="col">
                 <!-- Select toppings type -->
                 <label class="" for="topping">Toppings</label>
-                <select multiple class="custom-select toppings" >
+                <select multiple class="custom-select toppings">
                   <option value="1">Onion</option>
                   <option value="2">Sausages</option>
                   <option value="3">Mushrooms</option>
@@ -221,29 +228,24 @@
   <div class="checkout-section">
     <h1 class="checkout-title">Summary</h1>
     <div>
-      <h3 class="checkout-complete">Total amount : Ksh<span id="total-amt">2,000</span><span class="btn btn-primary" id="checkout-btn">CHECKOUT</span></h3>
+      <h3 class="checkout-complete">Total amount : Ksh<span id="total-amt"></span><span class="btn btn-primary"
+          id="checkout-btn">CHECKOUT</span></h3>
     </div>
     <div class="checkout-info">
-      <div class="row checkout-order-details">
-        <div class="col pizza-name">
-          <h4 class="checkout-order-title">Pizza</h4>
-        </div>
-        <div class="col pizza-size">
-          <h4 class="checkout-order-title">Size</h4>
-        </div>
-        <div class="col pizza-qty">
-          <h4 class="checkout-order-title">Qty</h4>
-        </div>
-        <div class="col pizza-topping">
-          <h4 class="checkout-order-title">Toppings</h4>
-        </div>
-        <div class="col pizza-delivery">
-          <h4 class="checkout-order-title">Delivery</h4>
-        </div>
-        <div class="col pizza-total-amt">
-          <h4 class="checkout-order-title">Amount</h4>
-        </div>
-      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Size</th>
+            <th scope="col">Crust</th>
+            <th scope="col">Topping</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="display-order"></tbody>
+      </table>
+
     </div>
   </div>
 
@@ -271,3 +273,32 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row checkout-order-details">
+        <div class="col pizza-name">
+          <h4 class="checkout-order-title">Pizza</h4>
+        </div>
+        <div class="col pizza-size">
+          <h4 class="checkout-order-title">Size</h4>
+        </div>
+        <div class="col pizza-qty">
+          <h4 class="checkout-order-title">Qty</h4>
+        </div>
+        <div class="col pizza-topping">
+          <h4 class="checkout-order-title">Toppings</h4>
+        </div>
+        <div class="col pizza-delivery">
+          <h4 class="checkout-order-title">Delivery</h4>
+        </div>
+        <div class="col pizza-total-amt">
+          <h4 class="checkout-order-title">Amount</h4>
+        </div></div> -->
