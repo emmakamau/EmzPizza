@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //Click on order online to display form
-    $("div#order-now-select").click(function(){
+    $("img#order-now-select").click(function(){
         $("div#order-form-section").show()
     })
 
@@ -21,7 +21,10 @@ $(document).ready(function(){
                 var quantity = $(this).find('.qty').find(":selected").text();
                 var size = $(this).find('.size').find(":selected").text();
                 var crust = $(this).find('.crust').find(":selected").text();
-                var toppings = $(this).find('.toppings').find(":selected").text();
+                var toppings = $(this).find('.toppings').find(":selected").toArray().map(item => item.text);
+               // let toppingsArray = $(this).find('.toppings').find(":selected").val().join(',');
+
+                console.log(toppings)
                 var newOrder = new pizzaOrder(quantity,size,crust,toppings)
                 newPizzaPurchase.orders.push(newOrder)
                 subTotal = newOrder.priceCalculation()
@@ -40,7 +43,6 @@ $(document).ready(function(){
 
                 calcTotal = calcTotal + subTotal + deliveryFee
                 document.getElementById("total-amt").innerHTML = calcTotal
-                console.log("Total:",calcTotal)
             }
         }) 
         $("div.checkout-section").show()
@@ -93,8 +95,13 @@ $(document).ready(function(){
             priceCrust = 200
         }
 
-        subTotal = (priceSize+priceCrust)*parseInt(this.qty)
-        //console.log(subTotal)
+        this.toppings.forEach(function(topping){
+            var price = 50
+            var priceToppings = price + price 
+        })
+
+        subTotal = (priceSize+priceCrust+priceToppings)*parseInt(this.qty)
+        
         return subTotal
     }
 })

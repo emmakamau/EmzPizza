@@ -92,30 +92,11 @@ body, html{
     background-color: black;
 }
 
-.order-now-select{
-    background-color: white;
+#order-now-select{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 50%;
-    padding: 0.5vh;
-    margin: 0 auto;
-    
-}
-
-.order-now-image{
-    height: 10vh;
-    width: 10vw;
-    float: right;
-}
-
-#order-txt{
-    font-family: 'Dancing Script', cursive;
-    font-size: 5vw;
-}
-
-#online-txt{
-    padding: 0 1vw;
-    color: #E45826;
-    font-weight: bold;
-    font-size: 5vw;
 }
     
 /* Pizza order form */
@@ -155,8 +136,6 @@ body, html{
     color: black;
     border: none;
 }
-
-
 
 /* Checkout section */
 .checkout-section{
