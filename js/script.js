@@ -41,6 +41,7 @@ $(document).ready(function(){
                                 `<th>${subTotal}</th>`+
                             `</tr>`      
                     )
+
                     calcTotal = calcTotal + subTotal + deliveryFee
                     document.getElementById("total-amt").innerHTML = calcTotal
                 }
@@ -48,6 +49,9 @@ $(document).ready(function(){
         
             $("div.checkout-section").show()
             $("div.order-form-section").hide()
+            $("h5#delivery-charges").append(
+                `<span>Delivery fee: ${deliveryFee}</span>`
+            )
             document.querySelector("form").reset(); //Reset form after submission
         }else{
             alert("Pizza not selected!")
@@ -71,10 +75,6 @@ $(document).ready(function(){
         var deliveryFee
         if($('input#to-be-delivered').is(':checked')){
             deliveryFee = 200
-            //document.getElementById("delivery-charges").innerHTML = deliveryFee
-            $("h5#delivery-charges").append(
-                `<span>Delivery fee: ${deliveryFee}</span>`
-            )
             return deliveryFee
         }else{
             deliveryFee = 0
