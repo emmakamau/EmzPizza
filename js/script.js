@@ -77,6 +77,7 @@ $(document).ready(function(){
 
         var priceSize
         var priceCrust
+        var priceToppings
         var subTotal
         
         if(this.size === "Small"){
@@ -97,7 +98,7 @@ $(document).ready(function(){
 
         this.toppings.forEach(function(topping){
             var price = 50
-            var priceToppings = price + price 
+            priceToppings = price + price 
         })
 
         subTotal = (priceSize+priceCrust+priceToppings)*parseInt(this.qty)
