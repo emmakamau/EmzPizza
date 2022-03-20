@@ -219,8 +219,8 @@ body, html{
         padding: 14vh 4vw 6vh;
     }
 
-    #to-be-delivered{
-        padding-right: 2vw !important;
+    .submit-form{
+        padding: 0 5vw;
     }
 
   }
