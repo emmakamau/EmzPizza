@@ -50,7 +50,7 @@ $(document).ready(function(){
             $("div.checkout-section").show()
             $("div.order-form-section").hide()
             $("h5#delivery-charges").append(
-                `<span>Delivery fee: ${deliveryFee}</span>`
+                `<span id="delivery-fee">Delivery fee: ${deliveryFee}</span>`
             )
             document.querySelector("form").reset(); //Reset form after submission
         }else{
@@ -127,6 +127,8 @@ function deliveryMsg(){
 //Order received message
 function completeOrder(){
     alert("Thank you, your order has been received.")
-    $("div.checkout-section").hide()
+    //$("div.checkout-section").hide()
+    location.reload()
+   
 }
 
